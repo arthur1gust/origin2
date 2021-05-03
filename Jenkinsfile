@@ -13,8 +13,8 @@ pipeline {
         }
         stage ('Build') {
             steps {
-                sh 'docker build -t app .'
-                sh 'docker tag app 5634654/docker_build:lts'
+                sh 'docker build -t app2 .'
+                sh 'docker tag app2 5634654/docker_build:lts'
                 sh 'docker push 5634654/docker_build:lts'
             }
         }
