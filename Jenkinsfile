@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage ('Source-git') {
             steps {
-                git 'https://github.com/arthur1gust/origin2.git'
+                git 'https://github.com/arthur1gust/test.git'
             }
         }
         stage ('Build') {
