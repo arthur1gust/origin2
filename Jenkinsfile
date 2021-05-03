@@ -14,8 +14,8 @@ pipeline {
         stage ('Build') {
             steps {
                 sh 'docker build -t app'
-                sh 'docker tag app  5634654/docker_build:latest'
-                sh 'docker push 5634654/docker_build:latest'
+                sh 'docker tag app  5634654/docker_build:ltt'
+                sh 'docker push 5634654/docker_build:ltt'
             }
         }
         stage ('deploy') {
