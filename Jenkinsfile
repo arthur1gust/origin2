@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker { 
             registryUrl 'https://hub.docker.com/repository/docker/5634654/docker_build'
-            image '5634654/docker_build:latest' 
+            image '5634654/docker_build:lts' 
         }
     }
     stages {
