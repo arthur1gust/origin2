@@ -8,12 +8,12 @@ pipeline {
     stages {
         stage ('Source-git') {
             steps {
-                git 'https://github.com/arthur1gust/docker_6.git'
+                git 'https://github.com/arthur1gust/origin2.git'
             }
         }
         stage ('Build') {
             steps {
-                sh 'docker build -t app2 .'
+                sh 'docker build -t app2'
                 sh 'docker tag app2 5634654/docker_build:lts'
                 sh 'docker push 5634654/docker_build:lts'
             }
