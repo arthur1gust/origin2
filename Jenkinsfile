@@ -14,13 +14,13 @@ pipeline {
         stage ('Build') {
             steps {
                 sh 'docker build -t app'
-                sh 'docker tag app  5634654/docker_build:ltt'
-                sh 'docker push 5634654/docker_build:ltt'
+                sh 'docker tag app  5634654/docker_build:lts'
+                sh 'docker push 5634654/docker_build:lts'
             }
         }
         stage ('deploy') {
             steps {
-                sh 'docker run -d 5634654/docker_build:latest'
+                sh 'docker run -d 5634654/docker_build:lts'
             }
         }
         
